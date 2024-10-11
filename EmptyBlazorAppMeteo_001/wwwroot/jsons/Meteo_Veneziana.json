@@ -1,0 +1,25 @@
+﻿{
+    "SummaryName": "Veneziana",
+      "Links": [
+        {
+        "Name": "Cos'è il termemetro",
+          "Link": "https://it.wikipedia.org/wiki/Termometro"
+        },
+        {
+        "Name": "Cos'è l'igometro",
+          "Link": "https://it.wikipedia.org/wiki/Igrometro"
+        },
+        {
+        "Name": "Cos'è il barometro",
+          "Link": "https://it.wikipedia.org/wiki/Barometro"
+        },
+        {
+        "Name": "Storia del barometro",
+          "Link": "https://www.narraremare.it/wp-content/uploads/2019/02/barometro-c.pdf"
+        },
+        {
+        "Name": "...",
+          "Link": "8.8.8.8"
+        }
+      ]
+    }

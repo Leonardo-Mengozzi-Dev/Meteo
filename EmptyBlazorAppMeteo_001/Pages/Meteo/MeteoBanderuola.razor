@@ -1,0 +1,35 @@
+﻿@page "/Meteo/Banderuola"
+<PageTitle>Banderuola</PageTitle>
+
+<!-- banderuola -->
+<section>
+    <h2>Banderuola</h2>
+    <article>
+        <pre>
+Chiamato in inglese <b>Wind Vane sensor</b>.
+
+Detto segnavento e permette di rileva la direzione del vento direzionandosi nella direzione in cui questultimo "soffia" e ruotando modifica la resistenza del potenziometro a cui è connesso.</pre>
+    </article>
+    <article>
+        <div class="center">
+            <img src="../Imgs/meccamismi-ridimensionata.jpg" title="Meccanismi" alt="Meccanismi" />
+        </div>
+        <pre>
+
+La banderuola è collegata al meccanismo in verticale sotto è un encoder assoluto/posizionale.
+Esistono due tipi di sensori, Analogica (necessità di un adc), Digitale (direttamente collegabile al pc, usato da noi).
+
+<b>funzionamento analogico</b>
+Mediante una resistenza con cursore rotativo o lineare (potenziometro),se rotativo può essere senza fine corsa, si rileva la direzione della banderuola in funzione del vento.
+La banderuola ruotando fa muovere il cursore del potenziometro modificando la resistenza.
+I valori di resistenza del potenziometro vanno da 0 al suo massimo.
+Il valore rilevato va convertito mediante un ADC.
+ADC usato:  MCP3208 (analogico).
+Comunica con un bus spi  (insieme di linee digitali per trasmettere dei dati).
+
+<b>funzionamento digitale</b>
+Tramite le 4 bande argentate e scure, si leggono 16 valori in codice gray, corrispondenti alle posizioni delle banderuola che vengono comunicati con 4 bit, mediante codice di gray.
+Si usa il codice gray perchè tra una posizione a un'altra cambia solo un bit per volta, ciò si fa perchè altrimenti si creano problemi durante la lettura, dati dalla sensibilità del sensore.
+Cambiando troppi bit in una sola volta ci sarebbero letture troppo sbagliate, invece commutando solo un bit per volta tra due posizioni gli errori sono meno alti.</pre>
+    </article>
+</section>

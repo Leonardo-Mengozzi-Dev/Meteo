@@ -1,0 +1,20 @@
+﻿@page "/Dati/Dettagli/{id}"
+<PageTitle>Dettagli Dati</PageTitle>
+@layout SecondLayout
+
+
+<h2>Dettagli tabella @Db.TableName</h2>
+@{
+    List<string> names = Db.TableQuery.ColumnsDisplayName();
+    List<List<string>> c = Db.TableQuery.ReadTab(Id);
+
+    <dl class="row">
+        @for(int i = 0; i < names.Count; i++)
+        {
+            <dt  class="col-sm-6">@names[i]:</dt>
+            <dd class="col-sm-6">@c[i][0]</dd>
+        }
+    </dl>
+}
+
+<BackToHome/>

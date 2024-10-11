@@ -1,0 +1,39 @@
+﻿@page "/Meteo/Veneziana"
+<PageTitle>Veneziana</PageTitle>
+
+<!-- veneziana -->
+<section>
+    <h2>Veneziana</h2>
+    <article>
+        <pre>
+Modello: <b>DHT22</b>
+Detto: Temperature and Humidity.
+
+Proteggere i sensori dall'irraggiamento solare (al quale sono sensibili), che altererebbe le rilevazioni.
+I sensori contenuti sono il termometro e igrometro (rileva umidità).
+
+<b>Com’è fatta</b>
+Composta da piatti cavi, che fanno passare aria ma non la  luce.
+
+<b>Comunicazione</b>
+Impiega un 1-Wire Bus.
+
+umidità
+L’umidità si può rilevare come <b>umidità relativa o assoluta.</b>
+La stazione meteo misura l'umidità relativa.
+
+umidità relativa
+Rileva la capacità dell'aria nel trattenere l'umidità, quando l’umidità relativa è pari al 100% significa che piovere, se 0% l’aria sta trattenendo bene l'umidità.
+L’umidità relativa è influenzata dalla temperatura, ad’alta temperatura l’umidità viene trattenuta meglio, a bassa temperatura l'aria cede più facilmente l'acqua (temperatura di rugiada).
+
+umidità assoluta 
+Quanta acqua c'è in un metro cubo d’aria.
+
+La veneziana contiene anche la capsula barometrica.
+Modello: <b>BMP180</b>
+Permete di rileva la pressione dell'aria, che varia al variare dell'altezza e nel tempo, determinando se c’è alta o bassa pressione (informazione utile per prevedere la pioggia).
+
+<b>Comunicazione</b>
+Il canale usasto è I2C.</pre>
+    </article>
+</section>

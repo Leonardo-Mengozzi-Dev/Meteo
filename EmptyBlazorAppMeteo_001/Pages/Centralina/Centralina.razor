@@ -1,0 +1,45 @@
+﻿@page "/Centralina"
+<PageTitle>Centralina</PageTitle>
+@layout SecondLayout
+
+<h2>Centralina</h2>
+
+<!-- immagine di navigazione -->
+<div class="center">
+    <img src="../Imgs/InternoCentralinaRidimensionato.jpg" alt="Immagine stazione meteo" usemap="#centralina">
+    <map name="centralina">
+        <NavLink href="/Centralina/FiltroAntiRimbalzo" id="#FiltroAntiRimbalzo">
+            <area title="FiltroAntiRimbalzo" href="#FiltroAntiRimbalzo" coords="270,145,378,213" shape="rect">
+            
+        </NavLink>
+        
+        <NavLink href="#/Centralina/Batteria" id="#Batteria">
+            <area title="Batteria" href="#Batteria" coords="196,512,425,635" shape="rect">
+            
+        </NavLink>
+        
+        <NavLink href="/Centralina/Ups" id="Ups">
+            <area title="Ups" href="#Ups" coords="333,347,450,471" shape="rect">
+            
+        </NavLink>
+        
+        <NavLink href="/Centralina/StabilizzatoreDiTensione1" id="#StabilizzatoreDiTensione1">
+            <area title="Stabilizzatore di tensione" href="#StabilizzatoreDiTensione1" coords="300,272,398,315" shape="rect">
+            
+        </NavLink>
+        
+        <NavLink href="/Centralina/Raspberry" id="#Raspberry">
+            <area title="Rasberry" href="#Raspberry" coords="83,285,171,282,174,373,237,373,238,482,84,484" shape="poly">
+            
+        </NavLink>
+        
+        <NavLink href="/Centralina/PiCamera" id="#PiCamera">
+            <area title="PiCamera" href="#PiCamera" coords="178,296,252,371" shape="rect">
+            
+        </NavLink>
+
+        <NavLink id="#StabilizzatoreDiTensione2" href="/Centralina/StabilizzatoreDiTensione2">
+            <area title="Stabilizzatore di tensione" href="#StabilizzatoreDiTensione2" coords="57,452,79,452,81,488,104,488,107,546,58,548" shape="poly">
+        </NavLink>
+    </map>
+</div>

@@ -1,0 +1,164 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'monospace';
+}
+
+header a {
+    float: right;
+}
+
+main h1, h2 {
+    text-align: center;
+}
+
+aside div {
+    padding: 10px;
+    text-align: center;
+}
+
+aside h4, h5, a {
+    text-align: center;
+}
+
+aside li {
+    margin-top: 5px;
+    display: flex;
+}
+
+aside ul li a {
+    font-size: 12px;
+}
+
+.content * {
+    border-radius: 10px;
+}
+
+article {
+    background-color: #504956;
+    padding: 40px;
+}
+
+    article pre {
+        color: white;
+        white-space: pre-wrap;
+    }
+
+section article + article {
+    margin-top: 10px;
+}
+
+header {
+    background-color: #bfceeb;
+    margin-bottom: 2%;
+    padding: 5px 0px;
+}
+
+section {
+    background-color: #05adfb;
+    padding: 15px;
+    margin: 10px 0px;
+}
+
+footer {
+    background-color: #9c9db0;
+}
+
+    footer > p {
+        padding: 0;
+        margin: 1% 0;
+        text-align: center;
+        font-weight: 600;
+    }
+
+html, .container-fluid {
+    background-color: #48c6fb;
+}
+
+.center {
+    text-align: center;
+}
+
+ul {
+    background: #f1f1f1;
+    list-style-type: none;
+}
+
+nav > ul {
+    padding: 25px;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+    li a:hover {
+        text-decoration: none;
+        color: black;
+        background-color: #05adfb;
+    }
+
+#top {
+    top: 15px;
+}
+
+select, input[type="button"] {
+    padding: 5px 15px;
+    border: 0px;
+    background-color: white;
+}
+
+/* tabella dati */
+
+.tableFixHead {
+    overflow: auto;
+    height: 65vh;
+}
+
+.tableFixHead thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Just common table stuff. Really. */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table tr:nth-of-type(odd) {
+    background: #f5f5f5;
+}
+
+table tr:nth-of-type(even) {
+    background: #C5C5C5;
+}
+
+table tr:hover {
+    background-color: #959595;
+}
+
+th, td {
+    padding: 8px 16px;
+    border-radius: 0px !important;
+}
+
+th {
+    background: #eee;
+}
+/* fine tabella dati */
+
+dt {
+    text-align: end;
+}
+
+@media screen and (min-width: 768px) {
+    iframe {
+        width: 500px;
+        height: 400px;
+    }
+}

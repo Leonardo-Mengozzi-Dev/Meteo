@@ -1,0 +1,38 @@
+﻿@page "/"
+
+<h2>La Stazione Meteo dell ITI Blaise-Pascal Comandini</h2>
+<section id="#home">
+    <article>
+        <pre>
+Il sito permette rilevare i dati metereologici della stazione meteo.
+
+Il sito è diviso nelle facciate:
+ - Home
+ - Chi siamo
+ - Stazione Meteo
+ - Aspetti dettagliati della Centralina
+ - Dove trovarci
+
+La stazione meteo comprende 6 sensori:
+ - termometro
+ - pluviometro
+ - barometro
+ - anemometro
+ - banderuola segna vento
+ - igrometro
+
+ Il sistema complessivo comprende:
+  - stazione Meteo
+  - client
+  - database server
+  - web server
+
+Il databse server è composto da un PC windows che archivia i dati rilevati dai sensori della stazione.
+I dati vengono inviati mediante rete lan, internet, con protocollo tcp ip trasferendo un file json.
+La stazione meteo invia i dati mediante socket, web socket.
+
+Il web server permette di consultare i dati contenuti nel database server mediante un sito, che mediante la rete, lo interpella per ottenere i dati dal database server.
+Il clienti usano il sito per ottenere i dati archiviati.</pre>
+    </article>
+
+</section>

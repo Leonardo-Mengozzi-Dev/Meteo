@@ -1,0 +1,32 @@
+﻿@inherits LayoutComponentBase
+
+<div class="container-fluid">
+    <Header />
+
+    <!-- main -->
+    <div class="content row">
+        @* nav *@
+        <Nav />
+
+        @* body *@
+        <main class="col-md-6">
+            <ErrorBoundary>
+                <ChildContent>
+                    @Body
+                </ChildContent>
+                <ErrorContent Context="ex">
+                        <FinestraModaleErrore Titolo="Errore">
+                            <div class="row">
+                                <p>@ex.Message</p>
+                            </div>
+                        </FinestraModaleErrore>
+                </ErrorContent>
+            </ErrorBoundary>
+        </main>
+
+        @* link esterni *@
+        <ExternalLink Path='@liks[PercorsoPaginaCorrente]'/>
+    </div>
+
+    <Footer />
+</div>

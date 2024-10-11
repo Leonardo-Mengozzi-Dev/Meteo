@@ -1,0 +1,17 @@
+﻿{
+  "SummaryName": "Rasberry",
+  "Links": [
+    {
+      "Name": "Cos'è",
+      "Link": "https://it.wikipedia.org/wiki/Raspberry_Pi"
+    },
+    {
+      "Name": "Quale Comprare",
+      "Link": "https://projects.raspberrypi.org/en/"
+    },
+    {
+      "Name": "...",
+      "Link": "8.8.8.8"
+    }
+  ]
+}

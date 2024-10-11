@@ -1,0 +1,17 @@
+{
+      "SummaryName": "Approfondimenti",
+      "Links": [
+        {
+          "Name": "ITI Blaise-Pascal Comandini",
+          "Link": "https://www.ispascalcomandini.it/itt-b-pascal/"
+        },
+        {
+          "Name": "Meteo.it",
+          "Link": "https://www.meteo.it/meteo/cesena-40007"
+        },
+        {
+          "Name": "...",
+          "Link": "8.8.8.8"
+        }
+      ]
+    }

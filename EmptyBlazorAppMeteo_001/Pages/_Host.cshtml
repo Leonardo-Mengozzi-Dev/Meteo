@@ -1,0 +1,58 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Web
+@namespace EmptyBlazorAppMeteo_001.Pages
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Pagina web della stazione metio del Pascal" />
+    <meta name="keywords" content="stazione, meteo, centralina, Pascal, ITT, ITI, Comandini" />
+    <meta name="author" content="Leonardo Mengozzi 5i" />
+    <meta name="copyright" content="LeonardoMengozzi.it" />
+    <meta name="robots" content="noindex" />
+
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
+    <title>Stazione metereologica ITI Blaise-Pascal</title>
+
+    <base href="~/" />
+    <link href="css/site.css" rel="stylesheet" />
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+</head>
+<body>
+    <component type="typeof(App)" render-mode="ServerPrerendered" />
+
+    <div id="blazor-error-ui">
+        <environment include="Staging,Production">
+            C'è stato un errore. Questa applicazione potrebbe non rispondere più finché non viene ricaricata.
+        </environment>
+        <environment include="Development">
+            Si è verificata un'eccezione non gestita. Per i dettagli, vedere gli strumenti di sviluppo del browser.
+        </environment>
+        <a href="" class="reload">Ricarica</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <div class="alert text-center cookiealert" role="alert">
+        <b>Ti piacciono i cookies?</b> &#x1F36A; Utilizziamo i cookie per assicurarti la migliore esperienza
+        sul nostro sito web. <a href="https://cookiesandyou.com/" target="_blank">Per saperne di più</a>
+        <button type="button" class="btn btn-primary btn-sm acceptcookies">
+            Accetto
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
+
+    <script src="_framework/blazor.server.js"></script>
+</body>
+</html>

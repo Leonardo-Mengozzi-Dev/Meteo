@@ -1,0 +1,33 @@
+﻿@page "/Meteo"
+<PageTitle>Meteo</PageTitle>
+
+@layout SecondLayout
+
+<h2>Sistema Metereologico</h2>
+
+<!-- mappa di navigazione -->
+<div class="center">
+    <img src="../Imgs/StazioneMeteo1Ridimensionata.png" alt="Immagine stazione meteo" usemap="#stazioneMeteo">
+    <map name="stazioneMeteo">
+        <NavLink href="/Centralina" id="#Centralina">
+            <area href="#Centralina" title="Centralina" coords="301,652,337,645,452,650,452,834,337,837,299,830" shape="poly">
+
+        </NavLink>
+        <NavLink href="/Meteo/Pluviometro" id="#Pluviometro">
+            <area href="Pluviometro" title="Pluviometro" coords="112,598,139,596,205,596,201,525,137,522,112,526" shape="poly">
+
+        </NavLink>
+        <NavLink href="/Meteo/Veneziana" id="#Veneziana">
+            <area href="#Veneziana" title="Veneziana" coords="345,434,392,437,387,536,338,533" shape="poly">
+
+        </NavLink>
+        <NavLink href="/Meteo/Banderuola" id="Banderuola">
+            <area href="#Banderuola" title="Banderuola" coords="466,284,473,271,654,272,655,345,627,344,473,293" shape="poly">
+
+        </NavLink>
+        <NavLink href="/Meteo/Anemometro" id="Anemometro">
+            <area href="#Anemometro" title="Anemometro" coords="463,92,477,87,492,95,504,105,515,116,532,115,545,107,559,93,576,89,591,93,600,103,604,115,600,129,590,141,579,147,563,149,551,143,543,130,533,132,515,133,516,163,505,165,495,155,494,146,481,147,468,140,459,126,456,115,455,102" shape="poly">
+
+        </NavLink>
+    </map>
+</div>

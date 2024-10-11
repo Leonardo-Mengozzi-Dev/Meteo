@@ -1,0 +1,76 @@
+﻿@page "/Dati"
+<PageTitle>Lettura dati</PageTitle>
+@layout SecondLayout
+
+<div class="row">
+    <p class="col-2">Seleziona una tabella:</p>
+    <select class="col-3" @bind="Db.TableName">
+        @foreach (var l in Db.TableQuery.GetTablesName())
+        {
+            <option>@l</option>
+        }
+    </select>
+</div>
+
+@if(Db.TableName == null) 
+{
+    <p><em>Schiegli tabella.</em></p>
+}
+else
+{
+    <h1>@Db.TableName</h1>
+
+    <div class="tableFixHead">
+        <table>
+            <thead>
+                <tr>
+                    @foreach (string s in Db.TableQuery.ColumnsDisplayName(4))
+                    {
+                        <th>@s</th>
+                    }
+
+                    @if (!IsRilevamenti)
+                    {
+                        <th>Azioni</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    List<List<string>> t = Db.TableQuery.ReadTab();
+                    for (int j = 0; j < t[0].Count; j++)
+                    {
+                        <tr>
+                            @for (int i = 0; i < 4; i++)
+                            {
+                                <td>@t[i][j]</td>        
+                            }
+
+                            @if (!IsRilevamenti)
+                            {
+                                <td>
+                                    <NavLink href=@Url("Dettagli", t[0][j])>
+                                        Dettagli
+                                    </NavLink> -
+                                    <NavLink href=@Url("Modifica", t[0][j])>
+                                        Modifica
+                                    </NavLink> -
+                                    <NavLink href=@Url("Elimina", t[0][j])>
+                                        Elimina
+                                    </NavLink>
+                                </td>
+                            }
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+    </div>
+    @if (!IsRilevamenti)
+    {
+        <NavLink href='@Url("Aggiungi")'>
+            Nuova @Db.TableName
+        </NavLink>
+    }
+}

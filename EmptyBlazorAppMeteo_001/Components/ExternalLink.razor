@@ -1,0 +1,14 @@
+﻿@page "/ExternalLink/{path}"
+
+<!-- link approfondimento a destra -->
+<aside class="col-md-3">
+    <h6>@Links.SummaryName</h6>
+
+    <ul>
+    @foreach (var l in Links.Links)
+    {
+        <li><a href="@l.Link">@l.Name</a></li> 
+    }
+    </ul>
+
+</aside>

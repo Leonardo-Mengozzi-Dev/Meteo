@@ -1,0 +1,17 @@
+﻿{
+  "SummaryName": "PiCamera",
+  "Links": [
+    {
+      "Name": "PiCamera",
+      "Link": "https://projects.raspberrypi.org/en/projects/getting-started-with-picamera"
+    },
+    {
+      "Name": "Altre fonti",
+      "Link": "https://picamera.readthedocs.io/en/release-1.13/"
+    },
+    {
+      "Name": "...",
+      "Link": "8.8.8.8"
+    }
+  ]
+}

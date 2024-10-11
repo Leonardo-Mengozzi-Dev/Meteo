@@ -1,0 +1,35 @@
+﻿
+<!-- nav bar, per schermi larghi si posiziona a sinistra, per schermi minori lo posiziona sopra -->
+<nav class="col-md-3">
+    <!-- sticky-top permette alla lista di rimanere visibile sullo schermo solo se lo schermo è largo -->
+    <ul id="top" class="sticky-top ">
+        <li><NavLink class=”nav-link” href="/" Match="NavLinkMatch.All">Home</NavLink></li>
+        <li>
+            <!-- collapse permette di rendere estensibile la lista -->
+            <NavLink class=”nav-link” data-bs-toggle="collapse" href="#collapse1">Sistema Metereologico  ▼</NavLink>
+            <ul id="collapse1" class="collapse">
+                <li><NavLink class=”nav-link” href="/Meteo">Sistema Metereologico</NavLink></li>
+                <li>
+                    <NavLink class=”nav-link” href="#collapse2" data-bs-toggle="collapse">Centralina  ▼</NavLink>
+                    <ul id="collapse2" class="collapse">
+                        <li><NavLink class=”nav-link” href="/Centralina">Centralina</NavLink></li>
+                        <li><NavLink class=”nav-link” href="/Centralina/Batteria">Batteria</NavLink></li>
+                        <li><NavLink class=”nav-link” href="/Centralina/FiltroAntiRimbalzo">Filtro anti rimbalzo</NavLink></li>
+                        <li><NavLink class=”nav-link” href="/Centralina/Ups">Ups</NavLink></li>
+                        <li><NavLink class=”nav-link” href="/Centralina/StabilizzatoreDiTensione1">S.D.T. 1</NavLink></li>
+                        <li><NavLink class=”nav-link” href="/Centralina/Raspberry">Raspberry</NavLink></li>
+                        <li><NavLink class=”nav-link” href="/Centralina/PiCamera">PiCamera</NavLink></li>
+                        <li><NavLink class=”nav-link” href="/Centralina/StabilizzatoreDiTensione2">S.D.T. 2</NavLink></li>
+                    </ul>
+                </li>
+                <li><NavLink class=”nav-link” href="/Meteo/Pluviometro">Pluviometro</NavLink></li>
+                <li><NavLink class=”nav-link” href="/Meteo/Veneziana">Veneziana</NavLink></li>
+                <li><NavLink class=”nav-link” href="/Meteo/Banderuola">Banderuola</NavLink></li>
+                <li><NavLink class=”nav-link” href="/Meteo/Anemometro">Anemometro</NavLink></li>
+            </ul>
+        </li>
+        <li><NavLink class=”nav-link” href="/Rilevazioni">Dove trovarci</NavLink></li>
+        <li><NavLink class=”nav-link” href="/ChiSiamo">Chi siamo</NavLink></li>
+        <li><NavLink class=”nav-link” href="/Dati">Rilevazioni</NavLink></li>
+    </ul>
+</nav>

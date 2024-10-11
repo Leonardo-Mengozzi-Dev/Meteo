@@ -1,0 +1,17 @@
+﻿{
+  "SummaryName": "Filtro anti rimbalzo",
+  "Links": [
+    {
+      "Name": "Wikipedia",
+      "Link": "https://it.wikipedia.org/wiki/Circuito_anti-rimbalzo"
+    },
+    {
+      "Name": "Altre fonti",
+      "Link": "https://www.digikey.it/it/articles/how-to-implement-hardware-debounce-for-switches-and-relays"
+    },
+    {
+      "Name": "...",
+      "Link": "8.8.8.8"
+    }
+  ]
+}

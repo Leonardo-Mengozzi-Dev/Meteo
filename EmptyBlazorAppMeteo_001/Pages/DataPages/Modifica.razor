@@ -1,0 +1,33 @@
+﻿@page "/Dati/Modifica/{id}"
+@using Microsoft.AspNetCore.Components.Forms
+<PageTitle>Modifica Dati</PageTitle>
+@layout SecondLayout
+
+@inject NavigationManager NavigationManager
+@inherits InterazioneTabella
+
+<h2>Modifica @Db.TableName</h2>
+
+<EditForm Model="Table" OnValidSubmit="Submit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    
+    <dl class="row">
+        @for (int i = Db.TableName == "Stazioni" ? 0 : 1; i < DisplayNames.Count; i++)
+        {
+            <dt class="col-sm-6">@DisplayNames[i]:</dt>
+            int ok = i;
+            <dd class="col-sm-6">
+                <input @bind:get="GetProp(ok)" 
+                @bind:set="(value) => { SetProp(value, ok); }" />
+            </dd>
+        }
+    </dl>
+
+    <div class="text-center">
+        <button type="submit">Salva</button>
+
+    </div>
+</EditForm>
+
+<BackToHome />

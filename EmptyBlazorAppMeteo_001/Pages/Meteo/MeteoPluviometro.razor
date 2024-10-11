@@ -1,0 +1,43 @@
+﻿@page "/Meteo/Pluviometro"
+<PageTitle>Pluviometro</PageTitle>
+
+<!-- pluviometro -->
+<section>
+    <h2>Pluviometro</h2>
+    <article>
+        <pre>
+Modello: <b>WH-SP-RG</b>
+Chiamato in inglese <b>rain gauge</b>.
+
+Rileva la quantità d’acqua caduta.
+
+<b>Il funzionamento</b> si basa sulla pioggia raccolta da un imbuto posizionato sulla parte superiore del sensore.
+La pioggia viene convogliata e riempie in alternanza due cisterne (capienza 0,3 mm di acqua), che una volta piene si svuotano autonomamente, facendo riempire successivamente l’altra.
+Le due cisterne hanno due posizioni stabili, date dal baricentro basso, impedendo movimenti involontari.
+La rilevazione avviene durante il movimento delle cisterne, grazie a un magnete, posto sulla cima del meccanismo, durante il movimento passa davanti a un Reed switch.
+Lo switch è un ampolla di vetro con dei contatti metallici ferrosi flessibili (magnetici), che grazie alla forza magnetica del magnete si toccano (contatto continuo) chiudendo il circuito.
+
+<b>Problema:</b> La rasberry lavora a 3,3V (livello logico alto, vero) e 0V (livello basso, falso).
+Per avere un messaggio continuo serve un circuito che invii 0 quando il bottone è pigiato e 1 quando il bottone è staccato, o viceversa.
+Il Reed Switch è un contatto meccanico, e vibra prima di stabilizzarsi e da delle letture sbagliate, per cui serve un filtro anti rimbalzo.
+
+<b>Il filtro anti rimbalzo</b> permette di ripulire il segnale del bottone dal rumore creato dalle vinrazioni meccaniche, che danno letture errate.
+Il filtro può essere hardware, sofware, misto, con le porte logiche.
+
+hardware
+Mediante un circuito rc, che mediante la carica e la scarica di un condensatore ritarda la commutazione.
+
+software
+Mediante n delay dopo la prima rilevazione dopo la quale non leggo più per il tempo del delay.
+
+porte logiche
+Mediante un circuito flip-flop, che commuta solo al primo rimbalzo, più pulito e preciso.
+Per questo circuito serve un deviatore.
+
+<b>Filtro applicato</b>
+Mediante un pulsante, rt e ct creano un delay, e i rimbalzi non si fanno passare tramite la porta nand.
+
+<b>Comunicazione</b>
+Impiega un bit per comunicare la quantità d’acqua.</pre>
+    </article>
+</section>
